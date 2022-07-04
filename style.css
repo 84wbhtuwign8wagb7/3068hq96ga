@@ -1,0 +1,958 @@
+/* ================================================================================================================= */
+/* Fonts */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+/* ================================================================================================================= */
+/* Start Styling */
+
+body {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    font-family: Poppins;
+    background: #313131;
+    color: white;
+    background: #202020;
+}
+
+h2 {
+    font-size: 24px;
+    font-weight: 500;
+}
+
+textarea {
+    resize: none;
+    background: #333;
+    color: white;
+    padding: 10px;
+    outline: none;
+    border: 1px solid #80868B;
+    border-radius: 8px;
+}
+
+/* ================================================================================================================= */
+/* Custom Scrollbar */
+
+::-webkit-scrollbar {
+    background: transparent;
+}
+  
+::-webkit-scrollbar-thumb {
+    background: #888;
+    border: 4px solid #333;
+    border-radius: 8px;
+    transition: background 0.2s linear;
+}
+  
+::-webkit-scrollbar-thumb:hover {
+    background: #a6a6a6;
+}
+
+::-webkit-scrollbar-button {
+      background: transparent;
+}
+  
+::-webkit-scrollbar-track-piece {
+    background: transparent;
+}
+  
+::-webkit-scrollbar-corner {
+    background: transparent;
+}
+
+/* ================================================================================================================= */
+/* Custom Selection */
+
+  ::selection {
+    background: #af14ba;
+    color: #FFF;
+  }
+  
+  ::-moz-selection {
+    background: #af14ba;
+    color: #FFF;
+  }
+  
+  ::-moz-selection.selection {
+    background: #FFF;
+    color: #FFF;
+  }
+
+/* ================================================================================================================= */
+/* Header */
+
+
+.header {
+    
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-position: center;
+    background-color: #202020;
+    
+}
+
+.headerlogo-img {
+    width: 250px;
+    height: 250px;
+    user-select: none;
+    margin-top: 150px;
+    animation: floating 2s infinite ease-in-out;
+}
+
+.headertext {
+    color: white;
+    font-size: 33px;
+
+}
+
+.headercontent {
+    margin-top: -20px;
+    color: white;
+    font-size: 18px;
+    
+}
+
+.headerbtn {
+    display: flex;
+}
+
+.wave {
+    height: 100%;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+/* ================================================================================================================= */
+/* Footer */
+
+.footer {
+    width: 100%;
+    background: #202020;
+    margin-bottom: -20px;
+}
+
+.team {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.teamcategory {
+    padding-top: 20px;
+}
+
+.footerteamlist {
+    margin-bottom: 10px;
+    list-style-type: none;
+    margin-left: -35px;
+}
+
+.discordtag {
+    color: #af14ba;
+}
+
+.fa-brands {
+    cursor: pointer;
+    padding-left: 10px;
+    transition: .2s ease-in-out;
+}
+
+.socialmedia-desktop {
+    position: absolute;
+    float: right;
+    margin-top: 10px;
+    right: 30px;
+    font-size: 24px;
+}
+
+.socialmedia-mobile {
+    position: relative;
+    display: none;
+    text-align: center;
+    font-size: 24px;
+    margin-top: -65px;
+    padding-bottom: 30px;
+}
+
+.socialmedia-link {
+    color: white;
+}
+
+.line {
+    position: relative;
+    margin-top: 25px;
+    width: 60%;
+    height: 1px;
+    background: #39404A;
+    left: 20%;
+}
+
+.copyright {
+    text-align: center;
+    color: #CECECE;
+    padding-bottom: 20px;
+}
+
+/* ================================================================================================================= */
+/* Button */
+
+.btn {
+    position: relative;
+    color: white;
+    
+    background: #333;
+    border-radius: 20px;
+    margin-right: 15px;
+    text-decoration: none;
+    padding: 12px;
+    padding-left: 30px;
+    padding-right: 30px;
+    font-weight: 500;
+    font-size: 20px;
+    transition: .2s ease-in-out;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    z-index: 0;
+}
+
+.btn:before {
+    content: '';
+    background: linear-gradient(45deg, #af14ba, #6a089e, #e034e0, #910966);
+    color: white;
+    position: absolute;
+    top: -2px;
+    left:-2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 20s linear infinite;
+    opacity: 0;
+    transition: opacity .2s ease-in-out;
+    border-radius: 20px;
+}
+
+.btn:active {
+    transform: scale(0.7);
+}
+
+.btn:hover:before {
+    opacity: 1;
+}
+
+.btn:after {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #333;
+    color: white;
+    left: 0;
+    top: 0;
+    border-radius: 20px;
+    transition: .2s ease-in-out;
+}
+
+.fa-discord:hover {
+    color: #5465DE;
+}
+
+.fa-youtube:hover {
+    color: #F20000;
+}
+
+.fa-tiktok:hover {
+    color: #A138D0;
+}
+
+/* ================================================================================================================= */
+/* Animations */
+
+@keyframes glowing {
+    0% { background-position: 0 0; }
+    50% { background-position: 400% 0; }
+    100% { background-position: 0 0; }
+}
+
+@keyframes floating{
+    50% {
+        transform: translateY(-30px);
+    }
+}
+
+/* ================================================================================================================= */
+/* Media Queries => responsive */
+
+@media only screen and (max-width: 900px) {
+    .header {
+        justify-content: center;
+        text-align: center;
+    }
+
+    .headerlogo-img {
+        display: none;
+    }
+
+    .headerbtn {
+        margin-left: 25%;
+    }
+
+    .popup {
+        max-width: 100%;
+        max-height: 100%;
+    }
+  }
+
+  @media only screen and (max-width: 700px) {
+    .headertext {
+        font-size: 4.5vw;
+    }
+
+    .headercontent {
+        font-size: 2.5vw;
+    }
+
+    .btn {
+        padding: 2vw;
+        padding-left: 5vw;
+        padding-right: 5vw;
+        font-size: 2.5vw;
+    }
+  }
+
+  @media only screen and (max-width: 600px) {
+    .headertext {
+        font-size: 27px;
+    }
+
+    .headercontent {
+        margin-left: 20px;
+        margin-right: 20px;
+        font-size: 15px;
+    }
+
+    .headercontent-br {
+        display: none;
+    }
+
+    .btn {
+        font-size: 15px;
+    }
+
+    .team {
+        display: block;
+        text-align: center;
+    }
+
+    .socialmedia-desktop {
+        display: none;
+    }
+
+    .socialmedia-mobile {
+        display: block;
+    }
+  }
+
+/* ================================================================================================================= */
+/* Start Styling | Script Hub */
+
+#website {
+    transition: .3s ease-in-out;
+    
+}
+
+.popup {
+    margin: 15px 0 20px 0;
+    color: white;
+    position: fixed;
+    left: 50%;
+    background: #333;
+    padding: 25px;
+    border-radius: 15px;
+    top: -150%;
+    max-width: 750px;
+    width: 100%;
+    max-height: 500px;
+    height: 100%;
+    opacity: 0;
+    pointer-events: none;
+    box-shadow: 0px 10px 15px rgba(0,0,0,0.1);
+    transform: translate(-50%, -50%) scale(0.8);
+    transition: top 0s 0.2s ease-in-out,
+                opacity 0.2s 0s ease-in-out,
+                transform 0.2s 0s ease-in-out;
+}
+
+.popup.show {
+    top: 50%;
+    opacity: 1;
+    pointer-events: auto;
+    transform:translate(-50%, -50%) scale(1);
+    transition: top 0s 0s ease-in-out,
+                opacity 0.2s 0s ease-in-out,
+                transform 0.2s 0s ease-in-out;
+
+}
+
+.popup :is(.popup-header) {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.popup .popup-header {
+    padding-bottom: 15px;
+    border-bottom: 1px solid #555;
+}
+
+.popup-header .popup-span {
+    font-size: 21px;
+    font-weight: 600;
+}
+
+.popup-header .popup-close {
+    display: flex;
+    align-items: center;
+    border-radius: 50%;
+    justify-content: center;
+    transition: all 0.3s ease-in-out;
+}
+
+.popup-header .popup-close {
+    font-size: 22px;
+    background: #555;
+    font-weight: 400;
+    height: 33px;
+    width: 33px;
+    cursor: pointer;
+}
+
+.popup-header .popup-close:hover {
+    background: #474747;
+}
+
+.popup-content {
+    max-height: 420px;
+    font-size: 16px;
+    overflow-y: scroll;
+    box-sizing: border-box;
+}
+
+.popup-addscript {
+    position: fixed;
+    background: #af14ba;
+    height: 50px;
+    width: 50px;
+    display: flex;
+    align-items: center;
+    border-radius: 50%;
+    justify-content: center;
+    font-size: 30px;
+    font-weight: 500;
+    bottom: 40px;
+    right: 50px;
+    cursor: pointer;
+    transition: .2s ease-in-out;
+    z-index: 100;
+}
+  
+.popup-addscript:hover {
+    background: #93129c;
+}
+
+/* ================================================================================================================= */
+/* Codebox | Script Hub */
+
+.code-wrapper {
+    position: relative;
+}
+
+code.hljs{
+    overflow: scroll;
+    border-radius: 10px;
+    margin-bottom: 40px;
+}
+
+code.hljs::-webkit-scrollbar-thumb {
+    border-color: #2B2B2B;
+}
+
+.codebox-copy {
+    display: flex;
+    float: right;
+    top: 10px;
+    right: 90px;
+    justify-content: center;
+    align-items: center;
+    background: #af14ba;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: .2s ease-in-out;
+    padding: 10px 20px 10px 20px;
+    position: relative;
+}
+
+.codebox-copy:hover {
+    background: #93129c;
+}
+
+/* ================================================================================================================= */
+/* Script List | Script Hub */
+
+.fa-user {
+    font-size: 14px;
+}
+
+.script-author {
+    margin-top: -25px;
+}
+
+.script-author-text {
+    margin-left: 8px;
+}
+
+.script-description {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    max-width: 650px;
+}
+
+.script-line {
+    width: 700px;
+    height: 1px;
+    background: #555;
+    border: none;
+    margin-left: 0;
+}
+
+/* ================================================================================================================= */
+/* New Script Activity - Script Hub */
+
+.addScript-form {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.addScript-button {
+    height: 20px;
+    width: 75px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #af14ba;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: .2s ease-in-out;
+    padding: 10px 20px 10px 20px;
+    position: relative;
+    margin-left: 10px;
+}
+
+.addScript-button.deactivated {
+    background: #888;
+}
+
+.addScript-button.deactivated:hover {
+    background: #999;
+}
+
+.addScript-button:hover {
+    background: #cf19dc;
+}
+
+.addScript-button-cancel {
+    border: 3px solid #af14ba;
+    background: transparent;
+    color: #e034e0;
+    height: 14px;
+}
+
+.addScript-button-cancel:hover {
+    background: transparent;
+}
+
+.addScript-buttons {
+    display: flex;
+    float: right;
+    margin-right: 30px;
+}
+
+.addScript-text {
+    margin: 0;
+}
+
+.form-div {
+    height: 48px;
+    position: relative;
+    margin-top: 24px;
+    width: 300px;
+    margin-right: 20px; 
+}
+
+.form-div-textarea {
+    height: 110px;
+    width: 620px;
+}
+
+.form-input {
+    box-sizing: border-box;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    font-size: 16px;
+    border: 1px solid #80868B;
+    border-radius: 8px;
+    outline: none;
+    padding: 16px;
+    background: none;
+    z-index: 1;
+    color: #fff;
+}
+
+.form-label {
+    position: absolute;
+    left: 16px;
+    top: 13px;
+    padding: 0 4px;
+    background-color: #333;
+    color: #80868B;
+    font-size: 16px;
+    transition: .3s;
+}
+
+.form-input:focus + .form-label {
+    top: -8px;
+    left: .12.8px;
+    color: #af14ba;
+    font-size: 12px;
+    font-weight: 500;
+    z-index: 10;
+}
+
+.form-input:not(:placeholder-shown).form-input:not(:focus) + .form-label {
+    top: -8px;
+    left: .12.8px;
+    font-size: 12px;
+    font-weight: 500;
+    z-index: 10;
+}
+
+/* ================================================================================================================= */
+/* Add Script Activity Terms Checkbox | Script Hub */
+
+input[type='checkbox'] {
+    height: 0; width: 0;
+}
+
+input[type='checkbox'] + label {
+    position: relative;
+    display: flex;
+    margin-bottom: 25px;
+    align-items: center;
+    transition: color 250ms cubic-bezier(.4,.0,.23,1);
+    box-sizing: border-box;
+}
+
+input[type='checkbox'] + label > span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 16px;
+    width: 24px;
+    height: 24px;
+    background: transparent;
+    border: 2px solid #9E9E9E;
+    border-radius: 5px;
+    cursor: pointer;  
+    transition: all 250ms cubic-bezier(.4,.0,.23,1);
+    box-sizing: border-box;
+}
+
+input[type='checkbox']:checked + label > span {
+    border: 12px solid #af14ba;
+    animation: shrink-bounce 200ms cubic-bezier(.4,.0,.23,1);
+    box-sizing: border-box;
+}
+
+input[type='checkbox']:checked + label > span:before {
+    content: "";
+    position: absolute;
+    top: 9px;
+    left: 5.5px;
+    border-right: 3px solid transparent;
+    border-bottom: 3px solid transparent;
+    transform: rotate(45deg);
+    transform-origin: 0% 100%;
+    animation: checkbox-check 125ms 250ms cubic-bezier(.4,.0,.23,1) forwards;
+}
+
+@keyframes shrink-bounce {
+    0%{
+        transform: scale(1);
+    }
+    33%{    
+        transform: scale(.85);
+    }
+    100%{
+        transform: scale(1);    
+    }
+}
+
+@keyframes checkbox-check {
+    0%{
+        width: 0;
+        height: 0;
+        border-color: white;
+        transform: translate3d(0,0,0) rotate(45deg);
+    }
+    33%{
+        width: 3.2px;
+        height: 0;
+        transform: translate3d(0,0,0) rotate(45deg);
+    }
+    100%{    
+        width: 3.2px;
+        height: 8px;    
+        border-color: white;
+        transform: translate3d(0,-8px,0) rotate(45deg);
+    }
+}
+
+/* ================================================================================================================= */
+/* Script Hub Search | Script Hub */
+
+.searchContainer {
+    margin: 20px 0;
+    background: #2B2B2B;
+    position: relative;
+    width: 600px;
+    height: 38px;
+    border: 3px solid #af14ba;
+    padding: 0px 10px;
+    border-radius: 50px;
+}
+
+.searchElementsContainer {
+    width: 100%;
+    height: 100%;
+    vertical-align: middle;
+}
+
+.search {
+    border: none;
+    height: 100%;
+    width: 100%;
+    padding: 0px 5px;
+    border-radius: 50px;
+    font-size: 16px;
+    font-family: Poppins;
+    color: #2B2B2B;
+    font-weight: 400;
+}
+
+.search::placeholder {
+    font-weight: 500;
+}
+  
+.search:focus {
+    outline: none;
+}
+
+.search-icon {
+    position: relative;
+    right: 5px;
+    float: right;
+    font-size: 17px;
+    color: #cf19dc;
+}
+
+input[type=search] {
+    color: white;
+    background: #2B2B2B;
+}
+
+input[type="search"]::-webkit-search-cancel-button {
+    display: none;
+}
+
+.scriptloadtimeText {
+    margin-top: -10px;
+    margin-left: 5px;
+}
+
+
+
+
+
+
+
+.next{
+    position: relative;
+    color: white;
+    
+    background: #333;
+    border-radius: 20px;
+    margin-right: 0px;
+    text-decoration: none;
+    padding: 12px;
+    padding-left: 80px;
+    padding-right: 80px;
+    font-weight: 500;
+    font-size: 20px;
+    transition: .2s ease-in-out;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    z-index: 0;
+}
+
+.next:before {
+    content: '';
+    background: linear-gradient(45deg, #af14ba, #6a089e, #e034e0, #910966);
+    color: white;
+    position: absolute;
+    top: -2px;
+    left:-2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 20s linear infinite;
+    opacity: 0;
+    transition: opacity .2s ease-in-out;
+    border-radius: 20px;
+}
+
+.next:active {
+    transform: scale(0.7);
+}
+
+.next:hover:before {
+    opacity: 1;
+}
+
+.next:after {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #333;
+    color: white;
+    left: 0;
+    top: 0;
+    border-radius: 20px;
+    transition: .2s ease-in-out;
+}
+
+
+
+
+
+/* KEYYYYYYYYYYYY */
+.checkspan{
+ color: #af14ba;
+ 
+}
+
+h4{
+ position: absolute;
+ top: 775px;
+ left: 50%; 
+ transform: translate(-50%)
+}
+
+.spp{
+ position: absolute; left: 50%; transform: translate(-50%);
+ color: #af14ba;
+font-weight: bold; 
+top: 400px;
+}
+.hh{
+ position: absolute;
+ top: 445px;
+ left: 15px;
+ position: absolute; left: 50%; transform: translate(-50%);
+}
+.bodykey{
+ background-image: url("https://media.discordapp.net/attachments/948832261917274152/993218682903875595/IMG_20220703_201621.jpg");
+ background-repeat: no-repeat;
+ background-size: 100%;
+ 
+ background-position: bottom;
+}
+@media (orientation: landscape) {
+  .kek{
+   position: absolute;
+   right: 0%;
+   top: 10px;
+   width: 250px;
+  }
+
+.h1{
+ position: absolute;
+ top: 300px;
+ 
+} 
+.next{
+ top: 65px;
+ border: 2px solid #9e29b3;
+ background: #1f1f1f;
+}
+.spp{
+ position: absolute;
+ top: 0px;
+ left: 45px;
+}
+.hh{
+position: absolute;
+top: 40px;
+left: 135px;
+}
+.bodykey{
+ background-position-y: 190px;
+}
+h4{
+ position: absolute;
+ top: 500px;
+ position: absolute; 
+ left: 50%; 
+ transform: translate(-50%)
+}
+
+i{
+ position: absolute;
+ top: -40px;
+}
+}
+
+
+
+/*logo checkpoint anim*/
+.kek{
+ -webkit-animation: bounce 2s infinite;
+ -o-animation: bounce 2s infinite;
+ animation: bounce 2s infinite ease-in-out;
+}
+
+@keyframes bounce {
+ 50% {
+        top: 40px;
+    }
+}
+
+e{
+ font-size: 30px;
+ position: relative;
+ bottom: -70px;
+}
