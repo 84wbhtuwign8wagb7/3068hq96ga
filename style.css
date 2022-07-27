@@ -1,0 +1,811 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+* {
+
+    font-family: 'Poppins', sans-serif;
+
+    margin: 0;
+
+    padding: 0;
+
+    box-sizing: border-box;
+
+    scroll-behavior: smooth;
+
+    color: white;
+
+}
+
+body {
+
+    background: linear-gradient(-45deg, #170920, #170920, #7209B7, #7209B7);
+
+    /* 
+
+       thing
+
+       black 
+
+       green 
+
+       red */
+
+	background-size: 400% 400%;	animation: gradient 15s ease infinite;
+
+	height: 100vh;
+
+}
+
+@keyframes gradient {
+
+	0% {
+
+		background-position: 0% 50%;
+
+	}
+
+	50% {
+
+		background-position: 100% 50%;
+
+	}
+
+	100% {
+
+		background-position: 0% 50%;
+
+	}
+
+}
+
+hr {
+
+    height: 2px;
+
+    width: 50%;
+
+    border: none;
+
+    background-color: white;
+
+    border-radius: 50%;
+
+    margin: 0 auto;
+
+}
+
+.topbar #menu-icon {
+
+    color: #343a40;
+
+    font-weight: 320;
+
+    font-size: 2.5em;
+
+    margin: 12px;
+
+}
+
+.sideNav {
+
+   height: 100%;
+
+   width: 0;
+
+   position: fixed;
+
+   z-index: 1;
+
+   top: 0;
+
+   left: 0;
+
+   background-color: #170920;
+
+   overflow-x: hidden;
+
+   padding-top: 60px;
+
+   transition: 0.5s;
+
+}
+
+.sideNav a {
+
+   text-decoration: none;
+
+   color: #fff;
+
+   display: block;
+
+   transition: 0.3s;
+
+   margin-top: -55px;
+
+   padding: 10px;
+
+}
+
+.main .intro {
+
+    width: 100%;
+
+    min-height: 100vh;
+
+    align-items: center;
+
+    text-align: center;
+
+    
+
+    margin-top: 200px;
+
+    transition: 0.6s;
+
+}
+
+.main .intro h2 {
+
+    color: white;
+
+    font-size: 2.2em;
+
+    font-weight: 625;
+
+    white-space: nowrap;
+
+    
+
+    /* don't change this */
+
+    position: relative;
+
+    z-index: 1;
+
+    /* ^ to override the blur */
+
+}
+
+/*
+
+.main .intro h2 span {
+
+    color: white;
+
+    font-size: 5em;
+
+    font-weight: 700;
+
+    display: flex;
+
+   
+
+    margin-top: -100px;
+
+    
+
+    margin-left: 7px;
+
+    text-align: center;
+
+    opacity: 0.7;
+
+    font-style: italic;
+
+    text-shadow: 0 0 10px rgb(63, 0, 100);
+
+}
+
+*/
+
+  
+
+.main .intro h3 {
+
+    color: white;
+
+    font-size: 1em;
+
+    font-weight: 550;
+
+    white-space: nowrap;
+
+    
+
+    opacity: 0.8;
+
+    position: relative;
+
+    z-index: 1;
+
+}
+
+.main .intro h3::after {
+
+    content: '|';
+
+    margin-left: 5px;
+
+    animation: blink 0.7s infinite;
+
+}
+
+@keyframes blink{
+
+50%{opacity: 0;}
+
+100%{opacity: 1;}
+
+}
+
+.main .intro #ferest-logo {
+
+  /* 
+
+  width is 20% for mobile
+
+  and 12% for pc **see main.js**
+
+  */
+
+    width: 50%;
+
+    
+
+    display: flex;
+
+    align-items: center;
+
+    opacity: 1;
+
+    margin: 0 auto;
+
+    
+
+    position: relative;
+
+    z-index: 1;
+
+}
+
+.main .intro #fz-preview {
+
+    height: 350px;
+
+    background: url(https://cdn.discordapp.com/attachments/996980708813840396/1000004356319498261/IMG_20220722_134011.png) no-repeat;
+
+    background-size: 70%;
+
+    
+
+    background-position: center;
+
+    background-position: top;
+
+}
+
+.main .intro #fz-preview::after {
+
+  -webkit-backdrop-filter: blur(5px); /* Use for Safari 9+, Edge 17+ (not a mistake) and iOS Safari 9.2+ */
+
+  backdrop-filter: blur(5px); /* Supported in Chrome 76 */
+
+  content: "";
+
+  display: block;
+
+  position: absolute;
+
+  width: 100%; height: 100%;
+
+  top: 0;
+
+}
+
+.main .intro #fz-preview {
+
+  position: relative;
+
+}
+
+.containere {
+
+  display: inline-block;
+
+  position: relative;
+
+  z-index: 1;
+
+  color: white;
+
+  font-weight: 550;
+
+    
+
+  width: 100%;
+
+  
+
+}
+
+.typed-out {
+
+  
+
+  animation: typing 1.6s steps(600, end) forwards;
+
+  font-size: 1rem;
+
+  width: 100%;
+
+  
+
+  opacity: 0;
+
+}
+
+@keyframes typing {
+
+  from { opacity: 0 }
+
+  to { opacity: 1 }
+
+}
+
+.boxe {
+
+    background: #212121;
+
+    padding: 10px 18px;
+
+    text-decoration: none;
+
+    font-weight: bold;
+
+    color: #fff;
+
+    display: inline-block;
+
+    margin: 0px 0;
+
+    border-radius: 5px;
+
+    width: 300px;
+
+    /* align text to left */
+
+    text-align: left;
+
+    
+
+    position: relative;
+
+    z-index: 1;
+
+}
+
+.box {
+
+    display: block;
+
+    background: #252733;
+
+    color: dodgerblue;
+
+    margin: 0 auto;
+
+    margin-top:255px;
+
+    
+
+    width: 245px;
+
+    height: 215px;
+
+    border-radius: 8px;
+
+    /* shadow */
+
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.7);
+
+    transition: 0.7s ease;
+
+}
+
+.box:hover {
+
+    /* make box bigger */
+
+    transform: scale(1.05);
+
+}
+
+.box .container #thumbnail {
+
+    display: block;
+
+    width: 100%;
+
+    height: 140px;
+
+    /* add border radius to top left and top right */
+
+    border-top-left-radius: 8px;
+
+    border-top-right-radius: 8px;
+
+}
+
+.box .container #icon {
+
+    display: block;
+
+    width: 30px;
+
+    height: 30px;
+
+    /* move bottom */
+
+}
+
+.box .container .tagw {
+
+    /* same line as icon */
+
+    display: block;
+
+    text-align: center;
+
+    width: 38px;
+
+    height: 20px;
+
+    /* move top */
+
+    margin-top: -25px;
+
+    /* move left */
+
+    margin-left: 35px;
+
+    color: dodgerblue;
+
+    font-size: 12.5px;
+
+    border: 1px solid dodgerblue;
+
+    border-radius: 4px;
+
+}
+
+.box .container .name {
+
+    display: block;
+
+    text-align: center;
+
+    width: 100%;
+
+    height: 20px;
+
+    /* move top */
+
+    margin-top: -19px;
+
+    /* move left */
+
+    margin-left: 8px;
+
+    font-size: 12.5px;
+
+    font-weight: 500;
+
+    color: white;
+
+}
+
+.box .container #thumbnail, #icon, .tagw, .name {
+
+    margin-top: 2px;
+
+}
+
+ .dwnr{
+
+ text-decoration: none;
+
+ color: dodgerblue;
+
+ background: #181818;
+
+ border: 1.5px solid dodgerblue;
+
+ font-weight: bold;
+
+ font-size: 18px;
+
+ padding-left: 35px;
+
+ padding-right: 35px;
+
+ padding-top: 3px;
+
+ padding-bottom: 3px;
+
+ border-radius: 8px;
+
+ position: relative;
+
+ top: 10px;
+
+}
+
+/*AMONG US-------*/
+
+.boxau {
+
+    display: block;
+
+    background: #252733;
+
+    color: #dddfdf;
+
+    margin: 0 auto;
+
+    margin-top: 30px;
+
+    
+
+    width: 265px;
+
+    height: 215px;
+
+    border-radius: 8px;
+
+    /* shadow */
+
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.7);
+
+    transition: 0.7s ease;
+
+}
+
+.boxau:hover {
+
+    /* make box bigger */
+
+    transform: scale(1.05);
+
+}
+
+.boxau .container #thumbnail {
+
+    display: block;
+
+    width: 100%;
+
+    height: 140px;
+
+    /* add border radius to top left and top right */
+
+    border-top-left-radius: 8px;
+
+    border-top-right-radius: 8px;
+
+}
+
+.boxau .container #icon {
+
+    display: block;
+
+    width: 30px;
+
+    height: 30px;
+
+    /* move bottom */
+
+}
+
+.boxau .container .tag {
+
+    /* same line as icon */
+
+    display: block;
+
+    text-align: center;
+
+    width: 38px;
+
+    height: 20px;
+
+    /* move top */
+
+    margin-top: -25px;
+
+    /* move left */
+
+    margin-left: 35px;
+
+    color: red;
+
+    font-size: 12.5px;
+
+    border: 1px solid red;
+
+    border-radius: 4px;
+
+}
+
+.boxau .container .name {
+
+    display: block;
+
+    text-align: center;
+
+    width: 100%;
+
+    height: 20px;
+
+    /* move top */
+
+    margin-top: -19px;
+
+    /* move left */
+
+    margin-left: -2px;
+
+    font-size: 12.5px;
+
+    font-weight: 500;
+
+    color: white;
+
+}
+
+.boxau .container #thumbnail, #icon, .tag, .name {
+
+    margin-top: 2px;
+
+}
+
+.dwnau{
+
+ text-decoration: none;
+
+ color: red;
+
+ background: #181818;
+
+ border: 1.5px solid red;
+
+ font-weight: bold;
+
+ font-size: 18px;
+
+ padding-left: 35px;
+
+ padding-right: 35px;
+
+ padding-top: 3px;
+
+ padding-bottom: 3px;
+
+ border-radius: 8px;
+
+ position: relative;
+
+ top: 10px;
+
+}
+
+/*----------------Key 1---------------*/
+
+.key{
+
+ border: 5px solid #121212;
+
+ top: 2%;
+
+ width: 95%;
+
+ height: 95%;
+
+ margin: 0 auto;
+
+ position: relative;
+
+ border-radius: 18px;
+
+ 
+
+     background: linear-gradient(-120deg, #252525,#242424, #282828, #171717, #111111);
+
+    /* 
+
+       thing
+
+       black 
+
+       green 
+
+       red */
+
+	background-size: 400% 400%;
+
+	animation: gege 15s ease infinite;
+
+	
+
+}
+
+@keyframes gege {
+
+	0% {
+
+		background-position: 0% 50%;
+
+	}
+
+	50% {
+
+		background-position: 100% 50%;
+
+	}
+
+	100% {
+
+		background-position: 0% 50%;
+
+	}
+
+}
+
+@media (orientation: landscape){
+
+ .key{
+
+  top: 2%;
+
+  width: 90%;
+
+ }
+
+ .textgaga{
+
+  font-size: 20px;
+
+ }
+
+}
+
+.next{
+
+ position: absolute;
+
+ bottom: 10px;
+
+left: 50%;
+
+transform: translate(-50%);
+
+border: 2px solid #121212;
+
+background: #202020;
+
+padding-left: 80px;
+
+padding-right: 80px;
+
+padding-top: 15px;
+
+padding-bottom: 15px;
+
+font-weight: bold;
+
+text-decoration: none;
+
+border-radius: 8px;
+
+color: #9403fc;
+
+}
